@@ -1,0 +1,40 @@
+'name': 'Piku'
+'scopeName': 'source.piku'
+'fileTypes': [
+  'txt',
+  'piku'
+]
+'patterns': [
+  {
+    'match': '(^●.*)'
+    'name': 'markup.heading.h1.bold.piku'
+  }
+  {
+    'match': '(^▼.*)'
+    'name': 'markup.heading.h2.bold.piku'
+  }
+  {
+    'match': '(^[※★].*)'
+    'name': 'markup.bold.piku'
+  }
+  {
+    'match': '(^[＞>].*)'
+    'name': 'markup.quote.piku'
+  }
+  {
+    'match': '(^[０-９0-9]+[.．].*)'
+    'name': 'markup.list.numbered.piku'
+  }
+  {
+    'match': '([\(（「“＜].*?[＞”」）\)])'
+    'name': 'string.quoted.piku'
+  }
+  {
+    'match': '([a-zA-Z0-9]*:\/\/[^\\s]*)'
+    'name': 'markup.underline.link.piku'
+  }
+  {
+    'match': '(.*?[:：][^/]*)'
+    'name': 'storage.type.piku'
+  }
+]
