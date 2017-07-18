@@ -10,28 +10,32 @@
     'name': 'markup.heading.h2.piku'
   }
   {
-    'match': '(^・.*)'
+    'match': '([＜\\[].*?[\\]＞])'
     'name': 'markup.heading.h3.piku'
   }
   {
-    'match': '(^[※\*].*)'
-    'name': 'entity.name.note.piku'
-  }
-  {
-    'match': '([＜\\[].*?[\\]＞])'
+    'match': '(^・.*)'
     'name': 'markup.heading.h4.piku'
   }
   {
+    'match': '(^[^\\s]*?[:：])'
+    'name': 'markup.heading.list.piku'
+  }
+  {
+    'match': '([０-９0-9]+[\.．][^ 　]*)'
+    'name': 'markup.list.numbered.piku'
+  }
+  {
     'match': '([（\(].*?[\)）])'
-    'name': 'comment.block.piku'
+    'name': 'markup.comment.block.piku'
+  }
+  {
+    'match': '(^[※\*].*)'
+    'name': 'comment.note.piku'
   }
   {
     'match': '(^#.*)'
     'name': 'comment.line.piku'
-  }
-  {
-    'match': '([０-９0-9]+[\.．][^ 　]*)'
-    'name': 'markup.list.numbered.bold.piku'
   }
   {
     'match': '([^\\s:：]*?:\/\/[^\\s]*)'
@@ -40,9 +44,5 @@
   {
     'match': '([^\\s:：]*?@[^\\s]*)'
     'name': 'entity.email.piku'
-  }
-  {
-    'match': '(^[^\\s]*?[:：])'
-    'name': 'storage.type.piku'
   }
 ]
