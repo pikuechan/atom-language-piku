@@ -6,7 +6,27 @@
 ]
 'patterns': [
   {
-    'match': '(^[▼▶].*)'
+    'match': '([^\\s:：]*?:\/\/[^\\s]*)'
+    'name': 'entity.uri.piku'
+  }
+  {
+    'match': '([^\\s:：]*?@[^\\s]*)'
+    'name': 'entity.email.piku'
+  }
+  # {
+  #   'match': '(^[※\*].*)'
+  #   'name': 'comment.note.piku'
+  # }
+  {
+    'match': '([^\\s]*?[※\*][^\\s]*)'
+    'name': 'comment.note.piku'
+  }
+  {
+    'match': '(^#.*)'
+    'name': 'comment.line.piku'
+  }
+  {
+    'match': '([【].*?[\】])'
     'name': 'markup.heading.h2.piku'
   }
   {
@@ -16,6 +36,10 @@
   {
     'match': '(^・.*)'
     'name': 'markup.heading.h4.piku'
+  }
+  {
+    'match': '(^[▼▶❤︎].*)'
+    'name': 'markup.heading.h5.piku'
   }
   {
     'match': '(^[^\\s]*?[:：])'
@@ -28,21 +52,5 @@
   {
     'match': '([（\(].*?[\)）])'
     'name': 'markup.comment.block.piku'
-  }
-  {
-    'match': '(^[※\*].*)'
-    'name': 'comment.note.piku'
-  }
-  {
-    'match': '(^#.*)'
-    'name': 'comment.line.piku'
-  }
-  {
-    'match': '([^\\s:：]*?:\/\/[^\\s]*)'
-    'name': 'entity.uri.piku'
-  }
-  {
-    'match': '([^\\s:：]*?@[^\\s]*)'
-    'name': 'entity.email.piku'
   }
 ]
