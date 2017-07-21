@@ -5,52 +5,79 @@
   'piku'
 ]
 'patterns': [
+  #URI
   {
     'match': '([^\\s:：]*?:\/\/[^\\s]*)'
     'name': 'entity.uri.piku'
   }
+  #Email
   {
     'match': '([^\\s:：]*?@[^\\s]*)'
     'name': 'entity.email.piku'
   }
+  #アスタリスク
   # {
   #   'match': '(^[※\*].*)'
   #   'name': 'comment.note.piku'
   # }
+  #アスタリスク
   {
     'match': '([^\\s]*?[※\*][^\\s]*)'
     'name': 'comment.note.piku'
   }
+  #シャープ
   {
     'match': '(^#.*)'
     'name': 'comment.line.piku'
   }
+  #カッコ
   {
-    'match': '([【].*?[\】])'
+    'match': '([（\(].*?[\)）])'
+    'name': 'markup.comment.block.piku'
+  }
+  #三角
+  #{
+  #  'match': '(^[▼▶❤︎].*)'
+  #  'name': 'markup.heading.h2.piku'
+  #}
+  #三角
+  {
+    'match': '([^\\s]*?[▼\❤︎][^\\s]*)'
     'name': 'markup.heading.h2.piku'
   }
+  #カッコ
+  {
+    'match': '([【].*?[\】])'
+    'name': 'markup.heading.h5.piku'
+  }
+  #カッコ
   {
     'match': '([＜\\[].*?[\\]＞])'
     'name': 'markup.heading.h3.piku'
   }
+  #丸ポイント
   {
-    'match': '(^・.*)'
+    'match': '(^●.*)'
     'name': 'markup.heading.h4.piku'
   }
+  #コロン
+  #{
+  #  'match': '(^[^\\s]*?[:：])'
+  #  'name': 'markup.heading.list.piku'
+  #}
+  #コロン
   {
-    'match': '(^[▼▶❤︎].*)'
-    'name': 'markup.heading.h5.piku'
-  }
-  {
-    'match': '(^[^\\s]*?[:：])'
+    'match': '([^\\s]*?[^\\s]*?[:：])'
     'name': 'markup.heading.list.piku'
   }
+  #数字
   {
     'match': '([０-９0-9]+[\.．][^ 　]*)'
     'name': 'markup.list.numbered.piku'
   }
+  #★
   {
-    'match': '([（\(].*?[\)）])'
-    'name': 'markup.comment.block.piku'
+    'match': '(^★)'
+    'name': 'markup.star.piku'
   }
 ]
