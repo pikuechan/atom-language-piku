@@ -30,35 +30,50 @@
     'match': '(^#.*)'
     'name': 'comment.line.piku'
   }
-  #カッコ
+  #サブカッコ
   {
     'match': '([（\(].*?[\)）])'
     'name': 'markup.comment.block.piku'
   }
   #三角
   #{
-  #  'match': '(^[▼▶❤︎].*)'
-  #  'name': 'markup.heading.h2.piku'
+  #  'match': '(^[▼▶].*)'
+  #  'name': 'markup.heading.title1.piku'
   #}
   #三角
   {
     'match': '([^\\s]*?[▼\❤︎][^\\s]*)'
-    'name': 'markup.heading.h2.piku'
+    'name': 'markup.heading.title1.piku'
   }
-  #カッコ
-  {
-    'match': '([【].*?[\】])'
-    'name': 'markup.heading.h5.piku'
-  }
-  #カッコ
+  #タイトルカッコ１
   {
     'match': '([＜\\[].*?[\\]＞])'
-    'name': 'markup.heading.h3.piku'
+    'name': 'markup.heading.title2.piku'
   }
-  #丸ポイント
+  #タイトルカッコ２
+  {
+    'match': '([【].*?[\】])'
+    'name': 'markup.heading.title3.piku'
+  }
+  #タイトルポイント
   {
     'match': '(^●.*)'
-    'name': 'markup.heading.h4.piku'
+    'name': 'markup.heading.title4.piku'
+  }
+  #リスト用数字
+  {
+    'match': '([０-９0-9]+[\.．][^ 　]*)'
+    'name': 'markup.list.numbered.piku'
+  }
+  #時間用数字
+  {
+    'match': '([0-9]+[\:][^ 　]*)'
+    'name': 'entity.time.piku'
+  }
+  #日付用数字
+  {
+    'match': '([0-9]+[\/][^ 　]*)'
+    'name': 'entity.date.piku'
   }
   #コロン
   #{
@@ -66,18 +81,23 @@
   #  'name': 'markup.heading.list.piku'
   #}
   #コロン
+  #{
+  #  'match': '([^\\s]*?[^\\s]*?[:：])'
+  #  'name': 'markup.heading.list.piku'
+  #}
+  #半角コロン
   {
-    'match': '([^\\s]*?[^\\s]*?[:：])'
+    'match': '([^\\s]*?[^\\s]*?[：])'
     'name': 'markup.heading.list.piku'
   }
-  #数字
+  #星目印
   {
-    'match': '([０-９0-9]+[\.．][^ 　]*)'
-    'name': 'markup.list.numbered.piku'
-  }
-  #★
-  {
-    'match': '(^★)'
+    'match': '([^\\s]*?[★])'
     'name': 'markup.star.piku'
+  }
+  #矢印
+  {
+    'match': '([^\\s]*?[→])'
+    'name': 'markup.arrow.piku'
   }
 ]
