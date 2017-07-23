@@ -16,38 +16,28 @@
     'name': 'entity.email.piku'
   }
   #アスタリスク
-  # {
-  #   'match': '(^[※\*].*)'
-  #   'name': 'comment.note.piku'
-  # }
-  #アスタリスク
   {
-    'match': '([^\\s]*?[※\*][^\\s]*)'
+    'match': '(\\t*?[※\*].*)'
     'name': 'comment.note.piku'
   }
   #シャープ
   {
-    'match': '(^#.*)'
+    'match': '(\\t*?#.*)'
     'name': 'comment.line.piku'
   }
-  #サブカッコ
+  #丸カッコ
   {
     'match': '([（\(].*?[\)）])'
     'name': 'markup.comment.block.piku'
   }
-  #三角
-  #{
-  #  'match': '(^[▼▶].*)'
-  #  'name': 'markup.heading.title1.piku'
-  #}
-  #三角
+  #タイトル三角
   {
-    'match': '([^\\s]*?[▼\❤︎][^\\s]*)'
+    'match': '(\\t*?[▼❤︎].*)'
     'name': 'markup.heading.title1.piku'
   }
   #タイトルカッコ１
   {
-    'match': '([＜\\[].*?[\\]＞])'
+    'match': '(＜.*?＞)'
     'name': 'markup.heading.title2.piku'
   }
   #タイトルカッコ２
@@ -55,9 +45,14 @@
     'match': '([【].*?[\】])'
     'name': 'markup.heading.title3.piku'
   }
+  #タイトルカッコ３
+  {
+    'match': '(\\[.*?\\])'
+    'name': 'markup.heading.title5.piku'
+  }
   #タイトルポイント
   {
-    'match': '(^●.*)'
+    'match': '(\\t*?●.*)'
     'name': 'markup.heading.title4.piku'
   }
   #リスト用数字
@@ -75,11 +70,6 @@
     'match': '([0-9]+[\/][^ 　]*)'
     'name': 'entity.date.piku'
   }
-  #コロン
-  #{
-  #  'match': '(^[^\\s]*?[:：])'
-  #  'name': 'markup.heading.list.piku'
-  #}
   #コロン
   #{
   #  'match': '([^\\s]*?[^\\s]*?[:：])'
