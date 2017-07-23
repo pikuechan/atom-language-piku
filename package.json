@@ -1,16 +1,16 @@
 {
-    "name": "piku-lang",
-    "main": "./lib/piku-lang",
-    "version": "0.1.0",
-    "description": "日本語テキストドキュメントのカラーリング用文法パッケージです",
-    "keywords": [],
-    "activationCommands": {
-        "atom-workspace": "piku-lang:toggle"
-    },
-    "repository": "https://github.com/pikuechan/piku-lang",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0 <2.0.0"
-    },
-    "dependencies": {}
+  "name": "piku-lang",
+  "main": "./lib/piku-lang",
+  "version": "0.2.0",
+  "description": "日本語テキストドキュメントのカラーリング用文法パッケージです",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "piku-lang:toggle"
+  },
+  "repository": "https://github.com/pikuechan/piku-lang",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
 }
